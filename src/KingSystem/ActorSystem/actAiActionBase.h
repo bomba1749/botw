@@ -121,7 +121,6 @@ public:
     }
 
     virtual void postLeave() {}
-
     virtual ActionBase* getChild(s32 idx) const { return nullptr; }
 
 protected:

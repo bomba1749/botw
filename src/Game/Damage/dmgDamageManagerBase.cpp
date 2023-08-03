@@ -218,6 +218,8 @@ void DamageManagerBase::preDelete1() {
         mStruct20_b = nullptr;
     }
 }
+//stubbed
+bool DamageManagerBase::isSlowTime(){}
 
 bool DamageManagerBase::canTakeDamage() {
     u32 damageTypeMaybe = m49(getField50());

@@ -20,6 +20,8 @@ public:
 
 private:
     chm::Root mRoot;
+    s32 field_58;
+    s32 field_80;
 };
 
 }  // namespace ksys::res
