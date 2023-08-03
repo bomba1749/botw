@@ -11,7 +11,9 @@ AirOctaState::AirOctaState(const InitArg& arg) : EnemyRoot(arg) {}
 
 AirOctaState::~AirOctaState() = default;
 
-bool AirOctaState::handleMessage_(const ksys::Message& message) {}
+bool AirOctaState::handleMessage_(const ksys::Message& message) {
+    return true;
+}
 
 bool AirOctaState::init_(sead::Heap* heap) {
     return EnemyRoot::init_(heap);
@@ -58,7 +60,7 @@ void AirOctaState::calc_(){
             }
             sub_71002FD8C0();
             if (*mIsNearCreate_m == true){
-                getActor()->getChemicalStuff()->field_58;
+                //getActor()->getChemicalStuff()->field_58;
             }
         }
         if (isCurrentChild("待機")){
