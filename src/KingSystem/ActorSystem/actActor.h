@@ -48,6 +48,7 @@ class CharacterController;
 
 namespace res {
 class Handle;
+class Chemical;
 }  // namespace res
 
 namespace xlink {
@@ -68,7 +69,6 @@ class Attention;
 class Awareness;
 class BaseProcLink;
 class BoneControl;
-class Chemical;
 class ImpulseBaseProcLink;
 class ModelBindInfo;
 class Schedule;
@@ -236,7 +236,7 @@ const MesTransceiverId* getMesTransceiverId() const { return mMsgTransceiver.get
     virtual void m94();
     virtual void m95();
     virtual void m96();
-    virtual Chemical* getChemicalStuff();
+    virtual res::Chemical* getChemicalStuff();
     virtual void getWeapons();
     virtual void getArmors();
     virtual void m100();
@@ -443,7 +443,7 @@ protected:
     /* 0x694 */ sead::Atomic<int> mFadeOutDeleteType = 0;
     /* 0x698 */ sead::Atomic<u32> mFadeOutSleepFlags;
     /* 0x6a0 */ void* _6a0 = nullptr;
-    /* 0x6a8 */ Chemical* mChemical = nullptr;
+    /* 0x6a8 */ res::Chemical* mChemical = nullptr;
     /* 0x6b0 */ phys::Reaction* mReaction = nullptr;
     /* 0x6b8 */ void* _6b8 = nullptr;
     /* 0x6c0 */ UMiiModelLink mUMiiModelLink{this};

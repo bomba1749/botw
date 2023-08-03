@@ -17,7 +17,7 @@ public:
     bool parse_(u8* data, size_t size, sead::Heap* heap) override;
 
     const chm::Root& getRoot() const { return mRoot; }
-
+    s32 getField_58() const {return field_58; }
 private:
     chm::Root mRoot;
     s32 field_58;

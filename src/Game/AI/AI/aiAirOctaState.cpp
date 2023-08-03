@@ -4,6 +4,7 @@
 #include "KingSystem/ActorSystem/actAiAi.h"
 #include "math/seadVectorFwd.h"
 #include "KingSystem/Physics/RigidBody/physRigidBody.h"
+#include "KingSystem/Resource/Actor/resResourceChemical.h"
 
 namespace uking::ai {
 
@@ -60,7 +61,7 @@ void AirOctaState::calc_(){
             }
             sub_71002FD8C0();
             if (*mIsNearCreate_m == true){
-                //getActor()->getChemicalStuff()->field_58;
+                getActor()->getChemicalStuff()->getField_58();
             }
         }
         if (isCurrentChild("待機")){
