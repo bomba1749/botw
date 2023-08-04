@@ -61,7 +61,12 @@ void AirOctaState::calc_(){
             }
             sub_71002FD8C0();
             if (*mIsNearCreate_m == true){
-                getActor()->getChemicalStuff()->getField_58();
+                //NON_MATCHING: ksys::act::Chemical doesnt exist, so you cant get variables from it, so a bunch of this function is blocked
+                s32 field_58 = getActor()->getChemicalStuff()->getField_58();
+                s32 field_80 = getActor()->getChemicalStuff()->getField_80();
+                if(field_80 + field_58 >= 1){
+                    getActor()->getChemicalStuff()->sub_7100E37788(0);
+                }// logic that will work when act::Chemical is complete is unfinished also
             }
         }
         if (isCurrentChild("待機")){
